@@ -8,7 +8,6 @@ import RequireAuth from "./auth/requireAuth";
 import Login from "./auth/login";
 import MainLayout from "./components/menu/mainLayout";
 
-import TransactionInquiry from "./components/dashboard/transactionInquiry";
 
 // Creamos Okta una sola vez
 const oktaAuth = new OktaAuth(oktaConfig);
@@ -35,7 +34,6 @@ function App() {
           element={
             <RequireAuth>
               <MainLayout>
-                <TransactionInquiry />
               </MainLayout>
             </RequireAuth>
           }

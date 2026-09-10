@@ -58,18 +58,7 @@ const RequireAuth = ({ children }) => {
     return <div>Loading session...</div>;
   }
 
-  /* 
-  if (!authState.isAuthenticated) {
-    return <Navigate to="/login" />;
-  }
-
-  // Mientras se intercambia el token, mostramos un loader para evitar
-  // que los componentes hijos intenten hacer peticiones sin el token final.
-  if (!isTokenReady) {
-    return <div style={{ margin: "10px", padding: "10px" }}>Setting up secure environment...</div>;
-  } */
-
-  /** Colocamos esto para la prueba y lo quitamos  */
+  // Si no está autenticado, redirigimos al login
   if (authState.isAuthenticated) {
     return <Navigate to="/login" />;
   }

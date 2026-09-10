@@ -33,7 +33,7 @@ const Login = () => {
 
           <Title level={3}>
             Log In <br />
-            (Transaction Inquiry)
+            (Settlement Management)
           </Title>
 
           <Text type="secondary">Log in with your Okta credentials to continue</Text>
