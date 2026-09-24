@@ -28,11 +28,17 @@
   color: #61dafb;
 }
 
+.wu-loading-spinner {
+  animation: wu-spin 0.9s linear infinite;
+}
+
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg);  
   }
   to {
     transform: rotate(360deg);
   }
 }
+
+

@@ -19,3 +19,24 @@ code {
 .ant-drawer-header-title{
   align-items: baseline !important;
 }
+
+.ant-drawer-footer{
+  padding: 0px !important;
+}
+
+.ant-drawer-header{
+  background-color: white !important;
+}
+
+/* .wu-loading-spinner {
+  animation: wu-spin 0.9s linear infinite;
+}
+
+@keyframes wu-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

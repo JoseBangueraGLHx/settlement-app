@@ -1,33 +1,3 @@
-// Mock data for Account ID Drawer search & choices
-export const mockAccountSearchResults = [
-  {
-    organization: "Movistar",
-    key: "movistar",
-    accounts: [
-      { key: "mov1", account: "AG - 12345670", name: "Movistar Movil" },
-      { key: "mov2", account: "AG - 12345671", name: "Movistar Hogar" },
-    ],
-  },
-  {
-    organization: "Personal",
-    key: "personal",
-    accounts: [
-      { key: "per1", account: "AG - 12345672", name: "Personal Movil" },
-      { key: "per2", account: "AG - 12345673", name: "Personal Fibra" },
-      { key: "per3", account: "AG - 12345674", name: "Personal Flow" },
-      { key: "per4", account: "AG - 12345675", name: "Personal Pay" },
-    ],
-  },
-  {
-    organization: "Telecom",
-    key: "telecom",
-    accounts: [
-      { key: "tel1", account: "AG - 12345676", name: "Telecom Empresas" },
-      { key: "tel2", account: "AG - 12345677", name: "Telecom Redes" },
-    ],
-  },
-];
-
 // Mock data for Table Transactions matching table1.png
 export const mockTransactions = [
   {
@@ -35,7 +5,7 @@ export const mockTransactions = [
     transactionId: "TXN005",
     billerName: "Personal Movil",
     billerAccount: "BAC - 00101010101010110",
-    transactionDttm: "11:08:2025 04:30:00",
+    transactionDttm: "09:08:2026 04:30:00",
     transactionAmt: 210000.0,
     currency: "ARS",
     status: "Reversed",
@@ -45,7 +15,7 @@ export const mockTransactions = [
     transactionId: "TXN004",
     billerName: "Personal Movil",
     billerAccount: "BAC - 00101010101010110",
-    transactionDttm: "11:08:2025 04:30:00",
+    transactionDttm: "09:09:2026 04:30:00",
     transactionAmt: 220000.0,
     currency: "ARS",
     status: "Rejected",
@@ -55,7 +25,7 @@ export const mockTransactions = [
     transactionId: "TXN003",
     billerName: "Personal Movil",
     billerAccount: "BAC - 00101010101010110",
-    transactionDttm: "11:08:2025 04:30:00",
+    transactionDttm: "09:02:2026 04:30:00",
     transactionAmt: 230000.0,
     currency: "ARS",
     status: "Rejected",
@@ -65,7 +35,7 @@ export const mockTransactions = [
     transactionId: "TXN002",
     billerName: "Personal Movil",
     billerAccount: "BAC - 00101010101010110",
-    transactionDttm: "11:08:2025 04:30:00",
+    transactionDttm: "09:22:2026 04:30:00",
     transactionAmt: 240000.0,
     currency: "ARS",
     status: "Completed",
@@ -75,7 +45,7 @@ export const mockTransactions = [
     transactionId: "TXN010",
     billerName: "Personal Movil",
     billerAccount: "BAC - 00101010101010110",
-    transactionDttm: "11:08:2025 04:30:00",
+    transactionDttm: "09:17:2026 04:30:00",
     transactionAmt: 250000.0,
     currency: "ARS",
     status: "Reversed",
@@ -85,7 +55,7 @@ export const mockTransactions = [
     transactionId: "TXN011",
     billerName: "Personal Movil",
     billerAccount: "BAC - 00101010101010110",
-    transactionDttm: "11:08:2025 04:30:00",
+    transactionDttm: "09:11:2026 04:30:00",
     transactionAmt: 260000.0,
     currency: "ARS",
     status: "Completed",
@@ -95,7 +65,7 @@ export const mockTransactions = [
     transactionId: "TXN012",
     billerName: "Personal Movil",
     billerAccount: "BAC - 00101010101010110",
-    transactionDttm: "11:08:2025 04:30:00",
+    transactionDttm: "10:08:2026 04:30:00",
     transactionAmt: 270000.0,
     currency: "ARS",
     status: "Completed",
@@ -105,7 +75,7 @@ export const mockTransactions = [
     transactionId: "TXN013",
     billerName: "Personal Movil",
     billerAccount: "BAC - 00101010101010110",
-    transactionDttm: "11:08:2025 04:30:00",
+    transactionDttm: "11:08:2026 04:30:00",
     transactionAmt: 210000.0,
     currency: "ARS",
     status: "Reversed",
@@ -114,41 +84,61 @@ export const mockTransactions = [
 
 // Mock data for Transaction Details Drawer matching detail1.png
 export const mockTransactionDetailData = {
+  accountId: "Acme Corporation",
+  accountNumber: "POS-99D23401",
+  creationDate: "01-05-2026",
+  creationTime: "04:30:00",
+  currentStatus: "Pending",
+  status: "Pending",
+  settlementAccount: "01-05-2026 04:30:00",
+  partyId: "P-001",
+  agreementId: "AGR-1",
   transactionId: "TXN005",
   statusCd: "Reversed",
-  operationStage: "Stage 3", // validar que campo es del swagger
+  operationStage: "Stage 3",
   controlSignatureCd: "CS-2025-008",
   ordererBusinessRefTxt: "{Orderer Business Reference}",
   beneficiaryBusinessRefTxt: "{Beneficiary Business Reference}",
-  amount: "ARS 210000.00", // Validar que campo es del swagger
+  amount: "ARS 210000.00",
   paymentMethodCd: "{ Debit / Credit }",
   channelStatusCd: "Completed",
-  creationDate: "01-05-2026 04:30:00", // Validar que campo es del swagger
-  dueDate: "01-15-2026", // Validar que campo es del swagger o si es dueDttm
-  caseInformation: {
-    requesterName: "Harry and Lloyd", // Validar que campo es del swagger
-    reason: "customer_request", // Validar que campo es del swagger
-    comment: "He wants to return it to her and hopefully win her heart in the process.", // Validar que campo es del swagger
-    reversedBy: "Internal User (Back-Office)", // Validar que campo es del swagger
-    reversedAt: "Nov 26, 2025 10:57:44", // Validar que campo es del swagger
-  },
-  consolidateKey: {
-    numberValue: "{ Number value }", // Validar que campo es del swagger
-    taxValue: "( Currency E.g. (IVA) ARS $Tax value )", // Validar que campo es del swagger
-  },
-  financialBreakdown: {
-    amount: "ARS$150,000.00", // Validar que campo es del swagger
-    charges: "ARS$280.75", // Validar que campo es del swagger
-    fee: "ARS$275.50", // Validar que campo es del swagger
-    commission: "ARS$4,200.00", // Validar que campo es del swagger
-    netAmount: "ARS $205,800.00", // Validar que campo es del swagger
-  },
-  transactionInfo: {
-    externalReferenceId: "TXN-968334",
-    createdByTxt: "central.station.kiosk@westernunion.com",
-    sourceCd: "Call Center",
-    transactionTypeCd: "Payment",
-    transactionDesc: "Internet Service Payment",
-    systemReferenceId: "TXN027",
-  },
+  dueDate: "01-15-2026",
+  // caseInformation: {
+  //   requesterName: "Harry and Lloyd",
+  //   reason: "customer_request",
+  //   comment: "He wants to return it to her and hopefully win her heart in the process.",
+  //   reversedBy: "Internal User (Back-Office)",
+  //   reversedAt: "Nov 26, 2025 10:57:44",
+  // },
+  // consolidateKey: {
+  //   numberValue: "{ Number value }",
+  //   taxValue: "( Currency E.g. (IVA) ARS $Tax value )",
+  // },
+  financialBreakdown: [
+    { label: "Principal Amount", value: "(00.00)", currency: "( Currency Type )" },
+    { label: "Processing Fee", value: "(00.00)", currency: "( Currency Type )" },
+    { label: "Applicable Tax (VAT)", value: "(00.00)", currency: "( Currency Type )" },
+    { label: "Net Total", value: "(00.00)", currency: "( Currency Type )" },
+  ],
+  concentrationItems: [
+    {
+      billingDescriptor: "FIN-OPS*INTL_SETTLE_OCT24_RECO",
+      status: "Verified",
+      batchCode: "B-9021",
+      entryType: "Credit/Net",
+    },
+  ],
+  taxItems: [
+    { taxComponent: "Federal VAT", rate: "11.0 %", amount: "100.85", currency: "USD" },
+    { taxComponent: "Regional Levy", rate: "3.0 %", amount: "200.70", currency: "ARS" },
+    { taxComponent: "Capital Levy", rate: "5.0 %", amount: "220.70", currency: "ARS" },
+  ],
+  // transactionInfo: {
+  //   externalReferenceId: "TXN-968334",
+  //   createdByTxt: "central.station.kiosk@westernunion.com",
+  //   sourceCd: "Call Center",
+  //   transactionTypeCd: "Payment",
+  //   transactionDesc: "Internet Service Payment",
+  //   systemReferenceId: "TXN027",
+  // },
 };

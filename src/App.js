@@ -7,7 +7,7 @@ import { oktaConfig } from "./okta/oktaConfig";
 import RequireAuth from "./auth/requireAuth";
 import Login from "./auth/login";
 import MainLayout from "./components/menu/mainLayout";
-
+import SettlementManagmentApp from "./components/dashboard/settlement";
 
 // Creamos Okta una sola vez
 const oktaAuth = new OktaAuth(oktaConfig);
@@ -34,6 +34,7 @@ function App() {
           element={
             <RequireAuth>
               <MainLayout>
+                <SettlementManagmentApp />
               </MainLayout>
             </RequireAuth>
           }
